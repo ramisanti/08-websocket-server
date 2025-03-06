@@ -14,7 +14,7 @@ const socketController = (socket => {
         const id = payload.id;
         callback (id);
         console.log (id,payload);
-        socket.emit ('enviar-mensaje', payload);
+        socket.broadcast.emit ('enviar-mensaje', payload);
 
     }); 
 
